@@ -1,0 +1,74 @@
+/* Tambahkan CSS ini di file style.css yang sudah ada */
+
+/* Random Mode Indicator */
+.random-mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 0, 64, 0.2);
+    color: var(--neon-red);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    border: 1px solid var(--neon-red);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.random-mode::before {
+    content: "🎲 RANDOM MODE";
+}
+
+/* Update trader info styling for random mode */
+.trader-info {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--neon-red);
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.trader-rank, .trader-score {
+    color: var(--cyber-blue);
+    font-size: 16px;
+}
+
+/* Game card adjustments for random mode */
+.game-card {
+    position: relative;
+}
+
+.card-front {
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Difficulty indicator */
+.difficulty-indicator {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 217, 255, 0.2);
+    color: var(--cyber-blue);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    border: 1px solid var(--cyber-blue);
+}
+
+.difficulty-easy::before {
+    content: "EASY";
+}
+
+.difficulty-medium::before {
+    content: "MEDIUM";
+}
+
+.difficulty-hard::before {
+    content: "HARD";
+}
+
+.difficulty-extreme::before {
+    content: "EXTREME";
+}
