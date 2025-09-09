@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuess Arena - Arena.Trade Random Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-bg">
+        <!-- Header -->
+        <header>
+            <div class="logo">CYBERGUESS ARENA</div>
+            <button id="connectWalletBtn" class="neon-btn">Connect Wallet</button>
+        </header>
+
+        <!-- Game Container -->
+        <main>
+            <div id="gameArea">
+                <div class="game-container">
+                    <div class="level-indicator neon-text">LEVEL <span id="currentLevel">1</span>/500</div>
+                    
+                    <div class="game-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="image-container">
+                                    <img id="gameImage" src="https://via.placeholder.com/300x300/FF0040/000000?text=Loading..." alt="Guess this trader" class="game-image">
+                                    <div class="loading-indicator" id="loadingIndicator">Loading trader data...</div>
+                                </div>
+                                <div class="trader-info">
+                                    <div class="trader-rank" id="traderRank">Rank: #?</div>
+                                    <div class="trader-score" id="traderScore">Score: ?</div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="result-text" id="resultText">CORRECT!</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-controls">
+                        <input type="text" id="guessInput" placeholder="Enter trader name..." class="neon-input">
+                        <button id="submitBtn" class="neon-btn">SUBMIT</button>
+                        <button id="helpBtn" class="neon-btn">HELP (0.005 AVAX)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Wallet Panel -->
+            <div id="walletPanel" class="wallet-panel hidden">
+                <h3 class="neon-text">YOUR WALLET</h3>
+                <div class="wallet-address" id="walletAddress">Not connected</div>
+                <div class="wallet-balance">
+                    Balance: <span id="walletBalance">0</span> AVAX
+                </div>
+                <button id="showKeyBtn" class="neon-btn">Show Private Key</button>
+                <div id="privateKey" class="private-key">Private key will appear here</div>
+                <div class="wallet-actions">
+                    <button id="depositBtn" class="neon-btn">Deposit AVAX</button>
+                    <button id="playBtn" class="neon-btn">Play (0.02 AVAX)</button>
+                </div>
+                <div class="wallet-warning">⚠️ Never share your private key with anyone!</div>
+            </div>
+        </main>
+
+        <!-- Rules Section -->
+        <section id="rules">
+            <h2 class="neon-text">GAME RULES</h2>
+            <div class="rules-content">
+                <div class="rule-item">
+                    <span class="rule-number">1</span>
+                    <div class="rule-text">
+                        <strong>Connect Wallet</strong>: Connect your Web3 wallet to play
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-number">2</span>
+                    <div class="rule-text">
+                        <strong>Entry Fee</strong>: Pay 0.02 AVAX to start playing
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-number">3</span>
+                    <div class="rule-text">
+                        <strong>Random Challenge</strong>: Guess 500 traders in RANDOM order (not sequential)
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-number">4</span>
+                    <div class="rule-text">
+                        <strong>Real Images</strong>: All trader images are taken directly from Arena.Trade
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-number">5</span>
+                    <div class="rule-text">
+                        <strong>Level Progress</strong>: Every 25 levels costs 0.025 AVAX to unlock
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-number">6</span>
+                    <div class="rule-text">
+                        <strong>Help System</strong>: Use hints for 0.005 AVAX per guess
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-number">7</span>
+                    <div class="rule-text">
+                        <strong>Prize Pool</strong>: 600,000,000 $ARTGA distributed to top 50 players
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard -->
+        <section id="leaderboard">
+            <h2 class="neon-text">TOP 25 PLAYERS</h2>
+            <div id="top25List">
+                <!-- Leaderboard akan di-generate oleh JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
